@@ -150,4 +150,60 @@ const produto = {
     }
   }
 }
-produto.validarProduto()
+//produto.validarProduto()
+
+// VALOR NULL
+let altura = 12
+//altura = null
+ 
+let alturaOpcional: null | number = 12
+alturaOpcional = null
+
+type Contato = {
+  nome: string,
+  tel1: string,
+  tel2: string | null
+}
+const contato1: Contato = {
+  nome: 'Fabio',
+  tel1: '9827361',
+  tel2: null
+}
+console.log(contato1.tel2)
+
+let podeSerNulo = null //any
+podeSerNulo = 12
+podeSerNulo = 'XYZ'
+
+// DESAFIO MODULO 02 CONTA BANCARIA TRANSFORMAR JS EM TYPE
+
+type Conta = {
+  saldo: number,
+  depositar: (valor: number) => void
+  sacar: (valor: number) => void
+}
+type Correntista = {
+  nome: string,
+  contaBancaria: Conta,
+  contatos: string[]
+} 
+
+let contaBancaria: Conta = {
+  saldo: 3456,
+  depositar(valor: number): void {
+    this.saldo += valor
+  },
+  sacar(valor: number): void {
+    this.saldo -= valor
+  }
+}
+
+let correntista: Correntista = {
+  nome: 'José João',
+  contaBancaria: contaBancaria,
+  contatos: ['1234', '12345']
+}
+correntista.contaBancaria.depositar(100)
+correntista.contaBancaria.sacar(200)
+console.log(correntista)
+
