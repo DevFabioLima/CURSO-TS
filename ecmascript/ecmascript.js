@@ -120,29 +120,31 @@ const { primeiroNome, experiencia } = cientista;
 console.log(primeiroNome);
 console.log(experiencia);
 // Callback
-function esperar3s(callback) {
-    setTimeout(() => {
-        callback('3s depois...');
-    }, 3000);
+/* function esperar3s(callback: (dado: string) => void){
+ setTimeout(() => {
+   callback('3s depois...')
+ }, 3000)
 }
-esperar3s(function (resultdo) {
-    console.log(resultdo);
-});
+esperar3s(function(resultdo: string){
+ console.log(resultdo)
+})
+
 // Convertendo callback em promisse
 function esperar3sPromise() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve('3s depois promise...');
-        }, 3000);
-    });
+ return new Promise((resolve: any) => {
+   setTimeout(() => {
+     resolve('3s depois promise...')
+   }, 3000)
+ })
 }
-esperar3sPromise().then(dado => console.log(dado));
+esperar3sPromise().then(dado => console.log(dado))
+
 // CHAMADA API COM PROMISE
 fetch('https://swapi.dev/api/people/1/')
-    .then(res => res.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme.title))
-    .catch(err => console.log(err));
+     .then(res => res.json())
+     .then(personagem => personagem.films)
+     .then(films => fetch(films[0]))
+     .then(resFilm => resFilm.json())
+     .then(filme => console.log(filme.title))
+     .catch(err => console.log(err)) */ 
 //# sourceMappingURL=ecmascript.js.map

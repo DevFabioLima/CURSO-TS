@@ -145,7 +145,7 @@ console.log(primeiroNome)
 console.log(experiencia)
 
 // Callback
-function esperar3s(callback: (dado: string) => void){
+ /* function esperar3s(callback: (dado: string) => void){
   setTimeout(() => {
     callback('3s depois...')
   }, 3000)
@@ -171,4 +171,4 @@ fetch('https://swapi.dev/api/people/1/')
       .then(films => fetch(films[0]))
       .then(resFilm => resFilm.json())
       .then(filme => console.log(filme.title))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err)) */
