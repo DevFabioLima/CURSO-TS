@@ -10,6 +10,7 @@
   "author": "Fabio Lima",
   "license": "ISC",
   "dependencies": {
+    "@types/jquery": "^3.5.0",
     "@types/node": "^14.0.13",
     "live-server": "^1.2.1",
     "systemjs": "0.21.6"
